@@ -1,0 +1,166 @@
+
+//Mixin ______________________
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+//Переменные ______________________
+
+$text-color: #999999;
+$text-height: 1;
+$font-family: 'Yanone Kaffeesatz', sans-serif;
+
+//Наследование ______________________
+
+%btn {
+  position: relative;
+  display: inline-block;
+
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+
+  &:focus{
+    box-shadow: none;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    min-width: 1em;
+    padding: 15px 25px;
+    border-radius: 50px;
+    background-color: #c7b299;
+    border: 1px solid darken(#c7b299, 5%);
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.2);
+    transition: transform .1s, box-shadow .2s, background-color .2s;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -15px;
+    right: -15px;
+    border-radius: 50px;
+    box-shadow: 0 0 0px rgba(0,0,0,0.2), inset 0 0 0px rgba(0,0,0,0.2);
+    transition: box-shadow .1s;
+  }
+
+  &:hover,
+  &:focus {
+    span {
+      background-color: lighten(#c7b299, 3%);
+    }
+  }
+  &:active {
+    span {
+      background-color: #c7b299;
+      transform: scale(0.97);
+      box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+    }
+    &::after {
+      box-shadow: 0 0 2px rgba(0,0,0,0.2), inset -3px 3px 1em rgba(0,0,0,0.2);
+    }
+  }
+}
+
+
+%before {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+%subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: $text-height;
+  color: #008ed6;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+%title {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: $text-height;
+  color: #1a1a1a;
+  position: relative;
+
+  margin-bottom: 110px;
+
+  &:before {
+    @extend %before;
+    bottom: 0;
+    right: 50%;
+    height: 2px;
+    width: 20px;
+    background-color: #008ed6;
+    margin: 0 1px -30px 0;
+  }
+
+  &:after {
+    @extend %before;
+    bottom: 0;
+    left: 50%;
+    height: 2px;
+    width: 20px;
+    background-color: #008ed6;
+    margin: 0 0 -30px 1px;
+  }
+}
+
+%text{
+  width: 470px;
+  line-height: 1.5;
+}
+
+// Подключение button up
+
+// <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+// <div id="button-up"><i class="fas fa-chevron-up"></i></div>
+
+//Button-up ___________________________
+
+#button-up{
+  display: none;
+  position: fixed;
+  width: 41px;
+  height: 41px;
+  right: 30px;
+  bottom: 193px;
+  text-align: center;
+  font-size: 24px;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: .3s;
+
+  padding-top: 5px;
+
+  @include max-screen(425px) {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+#button-up:hover{
+  cursor: pointer;
+  transition: .3s;
+  -webkit-box-shadow: 0 0 60px 10px #B3B3B3;
+  box-shadow: 0 0 60px 10px #B3B3B3;
+}
