@@ -247,6 +247,43 @@ body {
     height: 680px;
     overflow: hidden;
 
+    //.owl-nav {
+    //
+    //  .owl-prev {
+    //    position: absolute !important;
+    //    height: 30px;
+    //    width: 30px;
+    //    top: 48%;
+    //    left: 3%;
+    //    font-family: 'Font Awesome 5 Free' !important;
+    //    font-weight: 900 !important;
+    //    outline: none;
+    //
+    //    &:before {
+    //      content: "\f104";
+    //      font-size: 22px;
+    //      color: #24282f;
+    //    }
+    //  }
+    //
+    //  .owl-next {
+    //    position: absolute !important;
+    //    height: 30px;
+    //    width: 30px;
+    //    top: 48%;
+    //    right: 3%;
+    //    font-family: 'Font Awesome 5 Free' !important;
+    //    font-weight: 900 !important;
+    //    outline: none;
+    //
+    //    &:before {
+    //      content: "\f105";
+    //      font-size: 22px;
+    //      color: #24282f;
+    //    }
+    //  }
+    //}
+
     button.owl-dot {
       height: 10px;
       width: 10px;
@@ -277,8 +314,6 @@ body {
         bottom: -40px;
       }
     }
-
-
 
     .carousel-img{
       width: 100%;
