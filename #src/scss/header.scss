@@ -12,6 +12,8 @@ body {
 //Header ___________________________
 
 .header {
+  position: relative;
+  overflow: hidden;
 
   .show-carousel {
     position: absolute;
@@ -244,7 +246,7 @@ body {
 
   .owl-carousel {
     display: block;
-    height: 680px;
+    height: 700px;
     overflow: hidden;
 
     //.owl-nav {

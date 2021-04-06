@@ -1,3 +1,6 @@
+
+//Projects ___________________________
+
 .projects {
 
   .projects__title {
@@ -19,6 +22,8 @@
         font-weight: 300;
         color: #8c8c8c;
         text-transform: inherit;
+
+        margin-bottom: 15px;
 
         &:hover{
           color: #ffffff;
@@ -148,6 +153,13 @@
     }
   }
 
+  .btn {
+    @extend %btn;
+    margin-bottom: 50px;
 
+    &:hover{
+      color: #ffffff;
+    }
+  }
 }
 
