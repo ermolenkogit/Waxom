@@ -150,7 +150,7 @@
     position: relative;
     z-index: 1;
 
-    padding-top: 22%;
+    padding-top: 300px;
   }
 
   .video__subtitle {
@@ -161,12 +161,12 @@
 
 }
 
-
 .mobile__images {
   display: flex;
   justify-content: center;
   text-align: center;
   height: 570px;
+  //position: relative;
 
   margin-top: 40px;
 
@@ -176,9 +176,31 @@
 
   .mobile__devices {
     height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .owl-carousel {
+    display: block;
+    width: 196px;
+    height: 336px;
+    overflow: hidden;
+
+    //  background: #c7b299;
+
+    .carousel__img {
+      width:auto;
+    }
+  }
+
+  .owl-carousel.owl-loaded{
+    position: absolute;
+    display: block;
+    top: 90px;
+    right: 183px;
+    z-index: 1;
   }
 }
-
 
 .mobile__title {
   @extend %title;
@@ -201,7 +223,7 @@
   position: relative;
 
   padding-left: 40px;
-  margin: 0 0 18px 50px;
+  margin: 0 0 18px 40px;
 
   span {
     display: inline-flex;

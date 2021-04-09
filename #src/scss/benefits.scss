@@ -1,0 +1,56 @@
+
+//Counter and Posts ___________________________
+
+.benefits{
+  background: linear-gradient(45deg, #241d1a, #4a3126);
+  padding: 40px 0;
+
+
+  .benefits__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .benefits__element {
+    width: 15%;
+    text-align: center;
+    padding-bottom: 20px;
+
+    p{
+      margin-bottom: 0;
+    }
+
+    .benefits__icon {
+      height: 45px;
+      margin-bottom: 20px;
+    }
+
+    .benefits__number {
+      font-size: 48px;
+      font-weight: 100;
+      color: #ffffff;
+      text-align: center;
+      opacity: 0;
+    }
+
+    .benefits__title {
+      font-size: 14px;
+      font-weight: 300;
+      color: #c7b299;
+      text-transform: uppercase;
+      opacity: 0.9;
+
+      &:before{
+        @extend %before;
+        top: 40px;
+        left: 39%;
+        width: 40px;
+        border: solid 2px #ffffff;
+      }
+    }
+  }
+
+
+}
