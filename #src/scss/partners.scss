@@ -1,0 +1,51 @@
+//Partners ___________________________
+
+.partners {
+  background: #555556 url('../img/partners/partners.jpg') no-repeat;
+  background-size: cover !important;
+  position: relative;
+
+  &:before {
+    @extend %before;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .5;
+    z-index: 1;
+  }
+
+  .partners__img {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    margin: 100px 0;
+
+    img {
+
+      &:hover{
+        animation: rotate 2s infinite;
+
+        @keyframes rotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          25% {
+            transform: rotate(-45deg);
+          }
+          50% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+}
