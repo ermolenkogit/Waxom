@@ -19,6 +19,10 @@
   .horizontal-carousel {
     transform-style: preserve-3d;
     height: 480px;
+
+    @include max-screen(768px) {
+      height: 400px;
+    }
   }
 
   .carousel__item {
@@ -103,11 +107,11 @@
   }
 
   .carousel__button-prev {
-    left: 45%;
+    left: 44%;
   }
 
   .carousel__button-next {
-    right: 45%;
+    right: 44%;
   }
 
   .carousel__button-prev::after,
@@ -139,6 +143,10 @@
 .purchase-now {
   background: linear-gradient(45deg, #241d1a, #4a3126);
   padding: 40px 0;
+
+  @include max-screen(768px) {
+    padding: 20px 0;
+  }
 
   .purchase-now__title {
     font-family: $font-family;

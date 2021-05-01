@@ -199,12 +199,20 @@
     top: 90px;
     right: 183px;
     z-index: 1;
+
+    @include max-screen(768px) {
+      right: 127px;
+    }
   }
 }
 
 .mobile__title {
   @extend %title;
   padding-top: 100px;
+
+  @include max-screen(768px) {
+    padding: 20px 0 10px;
+  }
 }
 
 .mobile__text {
@@ -224,6 +232,11 @@
 
   padding-left: 40px;
   margin: 0 0 18px 40px;
+
+  @include max-screen(768px) {
+    margin: 0 0 10px 40px;
+
+  }
 
   span {
     display: inline-flex;
