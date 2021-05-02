@@ -166,13 +166,10 @@
   justify-content: center;
   text-align: center;
   height: 570px;
-  //position: relative;
+
+  overflow: hidden;
 
   margin-top: 40px;
-
-  @include max-screen(425px) {
-    display: none;
-  }
 
   .mobile__devices {
     height: 100%;
@@ -203,6 +200,12 @@
     @include max-screen(768px) {
       right: 127px;
     }
+    @include max-screen(425px) {
+      right: 152px;
+    }
+    @include max-screen(375px) {
+      right: 134px;
+    }
   }
 }
 
@@ -212,6 +215,10 @@
 
   @include max-screen(768px) {
     padding: 20px 0 10px;
+  }
+
+  @include max-screen(425px) {
+    text-align: center;
   }
 }
 

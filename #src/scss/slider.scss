@@ -21,7 +21,10 @@
     height: 480px;
 
     @include max-screen(768px) {
-      height: 400px;
+      height: 350px;
+    }
+    @include max-screen(425px) {
+      height: 250px;
     }
   }
 
@@ -104,14 +107,42 @@
         border-bottom: 2px solid #a48d72;
       }
     }
+
+    @include max-screen(768px) {
+      top: 55%;
+      width: 55px;
+      height: 55px;
+    }
+
+    @include max-screen(425px) {
+      top: 55%;
+      width: 55px;
+      height: 55px;
+    }
   }
 
   .carousel__button-prev {
     left: 44%;
+
+    @include max-screen(768px) {
+      left: 15%;
+    }
+
+    @include max-screen(425px) {
+      left: 12%;
+    }
   }
 
   .carousel__button-next {
     right: 44%;
+
+    @include max-screen(768px) {
+      right: 15%;
+    }
+
+    @include max-screen(425px) {
+      right: 12%;
+    }
   }
 
   .carousel__button-prev::after,

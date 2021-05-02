@@ -203,8 +203,16 @@ body {
   .navbar {
     padding: 35px 16px;
 
+    @include max-screen(425px) {
+      padding: 35px 0;
+    }
+
     .logo {
-      height: 55px;
+      height: 45px;
+
+      @include max-screen(425px) {
+        height: 0;
+      }
     }
 
     .navbar-brand {
@@ -213,6 +221,15 @@ body {
       font-weight: 400;
       color: #ffffff;
       transition: color .2s linear;
+
+      @include max-screen(768px) {
+        font-size: 35px;
+      }
+
+      @include max-screen(425px) {
+        font-weight: 600;
+        color: #484c55;
+      }
 
       &:hover {
         color: #c7b299;
@@ -400,6 +417,10 @@ body {
       @include max-screen(768px) {
         padding: 10px 0 15px;
       }
+
+      @include max-screen(425px) {
+        font-size: 0;
+      }
     }
 
     .header__title {
@@ -407,6 +428,14 @@ body {
       font-weight: 800;
       padding-bottom: 30px;
       margin: 0;
+
+      @include max-screen(425px) {
+        font-size: 42px;
+      }
+
+      @include max-screen(375px) {
+        font-size: 38px;
+      }
     }
 
     .header__text {
@@ -414,6 +443,10 @@ body {
       font-weight: 300;
       line-height: 1.5;
       padding-bottom: 50px;
+
+      @include max-screen(425px) {
+        font-size: 18px;
+      }
     }
 
     .header__row {
@@ -457,7 +490,11 @@ body {
       align-items: center;
 
       @include max-screen(425px) {
-        bottom: -40px;
+        bottom: 45px;
+      }
+
+      @include max-screen(375px) {
+        bottom: 100px;
       }
     }
 
@@ -471,8 +508,16 @@ body {
       .carousel-img {
         width: 135%;
       }
-
     }
+
+    @include max-screen(425px) {
+      height: 736px;
+
+      .carousel-img {
+        width: 270%;
+      }
+    }
+
   }
 
 }
