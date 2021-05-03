@@ -26,6 +26,9 @@
     @include max-screen(425px) {
       height: 250px;
     }
+    @include max-screen(375px) {
+      height: 220px;
+    }
   }
 
   .carousel__item {

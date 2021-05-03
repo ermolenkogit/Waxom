@@ -11,12 +11,12 @@
     width: 100%;
 
     @include max-screen(425px) {
-      justify-content: space-around;
+      //justify-content: space-around;
+      flex-direction: column;
     }
   }
 
   .benefits__element {
-    //width: 15%;
     text-align: center;
     padding-bottom: 20px;
 
@@ -117,6 +117,7 @@
       height: 200px;
       overflow: hidden;
       position: relative;
+      z-index: 2;
 
       @include max-screen(768px) {
         height: 125px;
@@ -131,6 +132,7 @@
         top: 50%;
         left: 50%;
         width: 100%;
+        z-index: 1;
         transform: translate3d(-50%, -50%, 0);
         transition: .3s ease-in-out;
       }

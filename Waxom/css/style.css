@@ -234,7 +234,7 @@ body .modal-backdrop {
   display: none;
   position: absolute;
   right: 45px;
-  top: 52px;
+  top: 55px;
   z-index: 101;
   cursor: pointer;
   background: #484c55;
@@ -385,7 +385,7 @@ body .modal-backdrop {
   position: absolute;
   text-align: right;
   right: 10%;
-  top: 10%;
+  top: 16%;
 }
 
 .overlayMenu ul {
@@ -1053,7 +1053,7 @@ body .modal-backdrop {
   border-radius: 15px;
   -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  overflow: hidden !important;
   margin-bottom: 30px;
   -webkit-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
@@ -1092,6 +1092,7 @@ body .modal-backdrop {
   height: 240px;
   overflow: hidden;
   position: relative;
+  z-index: 3;
 }
 
 .projects .projects__card .card__img img {
@@ -1099,6 +1100,7 @@ body .modal-backdrop {
   top: 50%;
   left: 50%;
   width: 100%;
+  z-index: 1;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: .3s ease-in-out;
@@ -1115,7 +1117,7 @@ body .modal-backdrop {
 .projects .projects__card .card__img:before {
   bottom: -2px;
   left: 20px;
-  z-index: 1;
+  z-index: 2;
   width: 0;
   height: 0;
   border-style: solid;
@@ -1384,20 +1386,20 @@ body .modal-backdrop {
 }
 
 .mobile__images .mobile__devices {
-  height: 100%;
+  width: 100%;
   position: relative;
   z-index: 2;
 }
 
 .mobile__images .owl-carousel {
   display: block;
-  width: 196px;
-  height: 336px;
+  width: 203px;
+  height: 370px;
   overflow: hidden;
 }
 
 .mobile__images .owl-carousel .carousel__img {
-  width: auto;
+  width: 106%;
 }
 
 .mobile__images .owl-carousel.owl-loaded {
@@ -1540,6 +1542,7 @@ body .modal-backdrop {
   height: 200px;
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 
 .posts .posts__card .posts__img img {
@@ -1547,6 +1550,7 @@ body .modal-backdrop {
   top: 50%;
   left: 50%;
   width: 100%;
+  z-index: 1;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: .3s ease-in-out;
@@ -2150,8 +2154,16 @@ body .modal-backdrop {
     padding: 15px;
   }
 
+  .mobile__images {
+    height: auto;
+  }
+
+  .mobile__images .owl-carousel .carousel__img {
+    width: 80%;
+  }
+
   .mobile__images .owl-carousel.owl-loaded {
-    right: 127px;
+    right: 94px;
   }
 
   .mobile__title {
@@ -2228,7 +2240,6 @@ body .modal-backdrop {
 
   .header .navbar .navbar-brand {
     font-weight: 600;
-    color: #484c55;
   }
 
   .header .navbar .navbar-nav .nav-link {
@@ -2248,7 +2259,7 @@ body .modal-backdrop {
   }
 
   .header .owl-carousel .owl-dots {
-    bottom: 45px;
+    bottom: 90px;
   }
 
   .header .owl-carousel {
@@ -2294,8 +2305,12 @@ body .modal-backdrop {
     border: dashed transparent;
   }
 
+  .mobile__images .owl-carousel .carousel__img {
+    width: 100%;
+  }
+
   .mobile__images .owl-carousel.owl-loaded {
-    right: 152px;
+    right: 148px;
   }
 
   .mobile__title {
@@ -2303,8 +2318,10 @@ body .modal-backdrop {
   }
 
   .benefits .benefits__inner {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .posts .posts__card:hover .posts__text .posts__text-subtitle {
@@ -2396,15 +2413,23 @@ body .modal-backdrop {
   }
 
   .header .owl-carousel .owl-dots {
-    bottom: 100px;
+    bottom: 130px;
+  }
+
+  .slider .horizontal-carousel {
+    height: 220px;
   }
 
   .projects .projects__card .card__img img {
     width: 150%;
   }
 
+  .mobile__images .owl-carousel .carousel__img {
+    width: 88%;
+  }
+
   .mobile__images .owl-carousel.owl-loaded {
-    right: 134px;
+    right: 112px;
   }
 }
 
