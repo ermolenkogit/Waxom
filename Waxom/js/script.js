@@ -8,7 +8,7 @@ $(document).ready(function(){
         margin:0,
         nav:true,
         navText: [ '', ' ' ],
-        // autoplay:true,
+        autoplay:true,
         autoplayTimeout: 5000,
         smartSpeed: 1500,
 
@@ -45,13 +45,18 @@ $(document).ready(function() {
 
 // Якорь js
 
-$(document).ready(function(){
-    $("#menu").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
+$('.scrollto a').on('click', function() {
+
+    let href = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 1500,
+        easing: "swing"
     });
+
+    return false;
 });
 
 //JS-ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
