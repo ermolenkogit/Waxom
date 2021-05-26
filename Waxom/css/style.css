@@ -1506,6 +1506,8 @@ body .modal-backdrop {
   -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  position: relative;
+  z-index: 3;
   margin: 10px 12px;
   -webkit-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
@@ -1564,7 +1566,7 @@ body .modal-backdrop {
   position: absolute;
   top: 18px;
   left: 18px;
-  z-index: 3;
+  z-index: 4;
   color: #ffffff;
   text-align: center;
   border-radius: 5px;
@@ -1930,10 +1932,14 @@ body .modal-backdrop {
   height: 90px;
   overflow: hidden;
   border-radius: 5px;
+  position: relative;
+  z-index: 3;
   margin: 5px;
 }
 
 .footer .column__three .footer__container .footer__inner img {
+  position: relative;
+  z-index: 1;
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s;

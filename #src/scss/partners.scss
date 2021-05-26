@@ -250,6 +250,8 @@
         height: 90px;
         overflow: hidden;
         border-radius: 5px;
+        position: relative;
+        z-index: 3;
 
         margin: 5px;
 
@@ -259,6 +261,8 @@
         }
 
         img {
+          position: relative;
+          z-index: 1;
           transition: .5s;
 
           &:hover {
